@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap_Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <!-- Header with Logo and Title -->
+        <div class="header">
+            <img src="images/camera.png" alt="SnapGallery Logo" class="logo">
+            <h1>Snap-Gallery</h1>
+        </div>
+
+        <form class="search-bar" onsubmit="searchPhotos(); return false;">
+            <input type="text" id="search-input" placeholder="Search for photos...">
+            <button type="submit">Search</button>
+        </form>
+        <div id="photo-gallery" class="gallery"></div>
+        <div class="pagination">
+            <button id="prev-page" onclick="changePage(-1)">Previous</button>
+            <button id="next-page" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+
+    <!-- Modal for Zoomed Image -->
+    <div id="photo-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <a id="download-btn" href="#" class="download-button">Download</a>
+    </div>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
