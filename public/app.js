@@ -94,7 +94,11 @@ function changePage(direction) {
     currentPage += direction;
     fetchPhotos(currentPage, searchQuery);
     document.getElementById('prev-page').disabled = currentPage === 1;
+
+    // Scroll to the top of the page instantly
+    window.scrollTo(0, 0);
 }
+
 
 // Search photos
 function searchPhotos() {

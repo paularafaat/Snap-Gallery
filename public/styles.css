@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +13,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: #ffffff;
 }
 
+/* Header Styling */
 .header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .logo {
     height: 50px;
-    margin-right: 10px; /* Space between the logo and title */
+    margin-right: 10px;
 }
 
 /* Container Styling */
@@ -84,8 +87,8 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px; 
-    margin-bottom: 20px; 
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .gallery img {
@@ -140,7 +143,7 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.3s;
@@ -199,4 +202,24 @@ h1 {
 @keyframes zoomIn {
     from { transform: scale(0); }
     to { transform: scale(1); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .search-bar input {
+        width: 80%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery img {
+        aspect-ratio: 1/1;
+    }
+
+    .download-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }

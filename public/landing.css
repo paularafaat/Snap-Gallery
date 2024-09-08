@@ -1,0 +1,298 @@
+/* Define CSS Variables for Light and Dark Modes */
+:root {
+    --background-light: #f8f8f8;
+    --background-dark: #1a1a1a;
+    --text-light: #333;
+    --text-dark: #faf1f1;
+    --accent-light: #0073e6;
+    --accent-dark: #57a0ff;
+    --header-bg-light: #fff;
+    --header-bg-dark: #111;
+    --box-bg-light: #fff;
+    --box-bg-dark: #2a2a2a;
+    --btn-hover-light: #005bb5;
+    --btn-hover-dark: #3995ff;
+}
+
+/* Apply default light mode */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+header {
+    background-color: var(--header-bg-light);
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: var(--text-light);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-light);
+}
+#hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    padding: 10px 25px;
+    background-color: var(--accent-light);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: var(--btn-hover-light);
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--box-bg-light);
+    transition: background-color 0.3s;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* Features Section */
+#features {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#features h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 300px;
+    margin: 15px;
+    background-color: var(--box-bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+/* Screenshots Section */
+#screenshots {
+    padding: 60px 20px;
+    background-color: var(--box-bg-light);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#screenshots h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.screenshots-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.screenshots-gallery img {
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg-light);
+    color: var(--text-light);
+    padding: 40px 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer a {
+    color: var(--accent-light);
+    text-decoration: none;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    header {
+        background-color: var(--header-bg-dark);
+    }
+
+    nav h1, nav ul li a {
+        color: var(--text-dark);
+    }
+
+    nav ul li a:hover {
+        background-color: var(--accent-dark);
+    }
+
+    #about {
+        background-color: var(--box-bg-dark);
+    }
+
+    #features {
+        background-color: var(--background-dark);
+    }
+
+    .feature-item {
+        background-color: var(--box-bg-dark);
+    }
+
+    #screenshots {
+        background-color: var(--box-bg-dark);
+    }
+
+    footer {
+        background-color: var(--header-bg-dark);
+        color: var(--text-dark);
+    }
+
+    footer a {
+        color: var(--accent-dark);
+    }
+
+    .hero-content .btn {
+        background-color: var(--accent-dark);
+    }
+
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    #hero {
+        height: 60vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Features Section */
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        max-width: 90%;
+        margin: 15px 0;
+    }
+
+    /* Screenshots Section */
+    .screenshots-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
