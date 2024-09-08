@@ -23,6 +23,10 @@ body {
     justify-content: center;
     margin-bottom: 20px;
 }
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .logo {
     height: 50px;
