@@ -1,3 +1,5 @@
+![Alt text](public/images/screenshot2.jpg)
+
 # Snap-Gallery
 
 Snap-Gallery is a modern web app that allows users to search, explore, and download high-quality photos and wallpapers from the Unsplash API.
