@@ -38,4 +38,4 @@ To set up SnapGallery locally, follow these steps:
 Search Photos: Use the search bar to find specific images from the Unsplash API.
 Download: Click on any photo to zoom in and download it with the provided button.
 ## Licensing
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
