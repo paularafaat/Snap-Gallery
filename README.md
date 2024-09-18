@@ -15,26 +15,25 @@ To set up SnapGallery locally, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/poullaraafat/snapgallery.git
-Navigate to the project directory:
+2. **Navigate to the project directory:**
 
-bash
-Copy code
-cd snapgallery
-Install dependencies:
+   ```bash
+   cd snapgallery
 
-bash
-Copy code
-npm install
-Run the application locally:
+3. **Install dependencies:**
 
-bash
-Copy code
-npm start
-Open the app in your browser:
-Visit http://localhost:3000.
+   ```bash
+   npm install
 
-Usage
+4. **Run the application locally:**
+
+   ```bash
+   npm start
+5. **Open the app in your browser:**
+   Visit http://localhost:3000.
+
+## Usage
 Search Photos: Use the search bar to find specific images from the Unsplash API.
 Download: Click on any photo to zoom in and download it with the provided button.
-Licensing
+## Licensing
 This project is licensed under the MIT License - see the LICENSE file for details.
